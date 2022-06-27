@@ -1,11 +1,30 @@
 import 'package:flutter/material.dart';
 
-class SplashScreen extends StatelessWidget {
+import 'landingScreen.dart';
+
+class SplashScreen extends StatefulWidget {
   const SplashScreen({Key? key}) : super(key: key);
 
   @override
+  State<SplashScreen> createState() => _SplashScreenState();
+}
+
+class _SplashScreenState extends State<SplashScreen> {
+  @override
+  void initState() {
+    super.initState();
+
+    navigateToHome();
+  }
+
+  navigateToHome() async {
+    await Future.delayed(const Duration(seconds: 2)).then((value) =>
+        Navigator.of(context)
+            .push(MaterialPageRoute(builder: (_) => const Landing())));
+  }
   Widget build(BuildContext context) {
     return Scaffold(
+        resizeToAvoidBottomInset: false,
         backgroundColor: Colors.white,
         body: Column(
           children: [
