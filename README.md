@@ -1,4 +1,17 @@
-![Screenshot_20220713-152220_1](https://user-images.githubusercontent.com/97390895/178713412-60b2b289-8512-410c-a3b8-80c52e9dc52b.jpg)
+
 # Weather App
 
 Made Weather App in Hackathon Test.
+<table>
+  <tr>
+    <td>Splash Screen</td>
+     <td>Landing Screen</td>
+     <td>Ciry Selection Screen</td>
+     <td>Home Screen</td>
+  </tr>
+  <tr>
+    <td><img src="screenshots/Screenshot_1582745092.png" width=270 height=480></td>
+    <td><img src="screenshots/Screenshot_1582745125.png" width=270 height=480></td>
+    <td><img src="screenshots/Screenshot_1582745139.png" width=270 height=480></td>
+  </tr>
+ </table>
