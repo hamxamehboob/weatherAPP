@@ -23,6 +23,7 @@ class _SplashScreenState extends State<SplashScreen> {
             .push(MaterialPageRoute(builder: (_) => const Landing())));
   }
   Widget build(BuildContext context) {
+    var _mediaQuery = MediaQuery.of(context);
     return Scaffold(
         resizeToAvoidBottomInset: false,
         backgroundColor: Colors.white,
@@ -34,11 +35,11 @@ class _SplashScreenState extends State<SplashScreen> {
             Center(
               child: Image.asset(
                 "assets/images/SplashImage.png",
-                width: 129,
+                // height: MediaQuery.of(context).size.height/4,
               ),
             ),
             SizedBox(
-              height: 274,
+              height: MediaQuery.of(context).size.height/3.5,
             ),
             Row(
               children: [

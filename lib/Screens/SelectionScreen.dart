@@ -2,7 +2,10 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:geolocator/geolocator.dart';
 
-import 'HomeScreen.dart';
+import 'Default_Cities/Barcelona.dart';
+import 'Default_Cities/Karachi.dart';
+import 'Default_Cities/London.dart';
+import 'Default_Cities/Sydney.dart';
 import 'landingScreen.dart';
 
 class SelectionScreen extends StatefulWidget {
@@ -104,8 +107,8 @@ class _SelectionScreenState extends State<SelectionScreen> {
                       ),
                       GestureDetector(
                         onTap: () {
-                          Navigator.of(context)
-                              .push(MaterialPageRoute(builder: (_) => Home()));
+                          Navigator.of(context).push(
+                              MaterialPageRoute(builder: (_) => Karachi()));
                         },
                         child: Padding(
                           padding: const EdgeInsets.only(left: 11),
@@ -135,16 +138,22 @@ class _SelectionScreenState extends State<SelectionScreen> {
                   padding: const EdgeInsets.all(20),
                   child: Row(
                     children: [
-                      Padding(
-                        padding: const EdgeInsets.only(left: 15),
-                        child: Text(
-                          "Karachi,Pakistan",
-                          style: TextStyle(
-                              color: Colors.black,
-                              fontWeight: FontWeight.w500,
-                              fontSize: 20),
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.of(context).push(
+                              MaterialPageRoute(builder: (_) => Karachi()));
+                        },
+                        child: Padding(
+                          padding: const EdgeInsets.only(left: 15),
+                          child: Text(
+                            "Karachi,Pakistan",
+                            style: TextStyle(
+                                color: Colors.black,
+                                fontWeight: FontWeight.w500,
+                                fontSize: 20),
+                          ),
                         ),
-                      ),
+                      )
                     ],
                   ),
                 ),
@@ -162,16 +171,22 @@ class _SelectionScreenState extends State<SelectionScreen> {
                   padding: const EdgeInsets.all(20),
                   child: Row(
                     children: [
-                      Padding(
-                        padding: const EdgeInsets.only(left: 15),
-                        child: Text(
-                          "Sydney, Australia",
-                          style: TextStyle(
-                              color: Colors.black,
-                              fontWeight: FontWeight.w500,
-                              fontSize: 20),
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.of(context).push(
+                              MaterialPageRoute(builder: (_) => Sydney()));
+                        },
+                        child: Padding(
+                          padding: const EdgeInsets.only(left: 15),
+                          child: Text(
+                            "Sydney, Australia",
+                            style: TextStyle(
+                                color: Colors.black,
+                                fontWeight: FontWeight.w500,
+                                fontSize: 20),
+                          ),
                         ),
-                      ),
+                      )
                     ],
                   ),
                 ),
@@ -189,16 +204,22 @@ class _SelectionScreenState extends State<SelectionScreen> {
                   padding: const EdgeInsets.all(20),
                   child: Row(
                     children: [
-                      Padding(
-                        padding: const EdgeInsets.only(left: 15),
-                        child: Text(
-                          "Barcelona, Argentina",
-                          style: TextStyle(
-                              color: Colors.black,
-                              fontWeight: FontWeight.w500,
-                              fontSize: 20),
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.of(context).push(
+                              MaterialPageRoute(builder: (_) => Barcelona()));
+                        },
+                        child: Padding(
+                          padding: const EdgeInsets.only(left: 15),
+                          child: Text(
+                            "Barcelona, Argentina",
+                            style: TextStyle(
+                                color: Colors.black,
+                                fontWeight: FontWeight.w500,
+                                fontSize: 20),
+                          ),
                         ),
-                      ),
+                      )
                     ],
                   ),
                 ),
@@ -216,16 +237,22 @@ class _SelectionScreenState extends State<SelectionScreen> {
                   padding: const EdgeInsets.all(20),
                   child: Row(
                     children: [
-                      Padding(
-                        padding: const EdgeInsets.only(left: 15),
-                        child: Text(
-                          "London, England",
-                          style: TextStyle(
-                              color: Colors.black,
-                              fontWeight: FontWeight.w500,
-                              fontSize: 20),
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.of(context).push(
+                              MaterialPageRoute(builder: (_) => London()));
+                        },
+                        child: Padding(
+                          padding: const EdgeInsets.only(left: 15),
+                          child: Text(
+                            "London, England",
+                            style: TextStyle(
+                                color: Colors.black,
+                                fontWeight: FontWeight.w500,
+                                fontSize: 20),
+                          ),
                         ),
-                      ),
+                      )
                     ],
                   ),
                 ),

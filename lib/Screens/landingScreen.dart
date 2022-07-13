@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'HomeScreen.dart';
+import 'Default_Cities/Karachi.dart';
 import 'SelectionScreen.dart';
 
 class Landing extends StatelessWidget {
@@ -8,6 +8,7 @@ class Landing extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var mediaQuery = MediaQuery.of(context);
     return Scaffold(
       resizeToAvoidBottomInset: false,
       body: Padding(
@@ -43,7 +44,7 @@ class Landing extends StatelessWidget {
             ),
             Image.asset("assets/images/landingImage.png"),
             SizedBox(
-              height: 115.8,
+              height: MediaQuery.of(context).size.height/8,
             ),
             Padding(
               padding: const EdgeInsets.only(left: 20, right: 21),
@@ -71,7 +72,7 @@ class Landing extends StatelessWidget {
                             child: GestureDetector(
                               onTap: () {
                                 Navigator.of(context).push(MaterialPageRoute(
-                                    builder: (_) => Home()));
+                                    builder: (_) => Karachi()));
                               },
                               child:
                                   Image.asset("assets/images/back-arrow.png"),
@@ -85,7 +86,7 @@ class Landing extends StatelessWidget {
               ]),
             ),
             SizedBox(
-              height: 18,
+              height: 10,
             ),
             Padding(
               padding: const EdgeInsets.only(left: 20, right: 21),
