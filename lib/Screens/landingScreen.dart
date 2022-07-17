@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:untitled/Model/Geolocator.dart';
+import 'package:untitled/Screens/HomeScreen.dart';
 
 import 'Default_Cities/Karachi.dart';
 import 'SelectionScreen.dart';
@@ -44,7 +46,7 @@ class Landing extends StatelessWidget {
             ),
             Image.asset("assets/images/landingImage.png"),
             SizedBox(
-              height: MediaQuery.of(context).size.height/8,
+              height: MediaQuery.of(context).size.height / 8,
             ),
             Padding(
               padding: const EdgeInsets.only(left: 20, right: 21),
@@ -59,7 +61,6 @@ class Landing extends StatelessWidget {
                       padding: EdgeInsets.only(left: 20),
                       child: Row(
                         children: [
-
                           Text(
                             "Select Current Location",
                             style: TextStyle(
@@ -71,8 +72,9 @@ class Landing extends StatelessWidget {
                             padding: const EdgeInsets.only(left: 59),
                             child: GestureDetector(
                               onTap: () {
+                                getcurrentPosistion();
                                 Navigator.of(context).push(MaterialPageRoute(
-                                    builder: (_) => Karachi()));
+                                    builder: (_) => HomeScreen()));
                               },
                               child:
                                   Image.asset("assets/images/back-arrow.png"),
@@ -117,10 +119,12 @@ class Landing extends StatelessWidget {
                               },
                               child: Image.asset("assets/images/arrow.png"),
                             ),
-                          )
+                          ),
+
                         ],
                       ),
                     ),
+
                   ),
                 ),
               ]),

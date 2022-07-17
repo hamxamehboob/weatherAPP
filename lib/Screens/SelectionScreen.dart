@@ -1,7 +1,6 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:geolocator/geolocator.dart';
-
+import 'package:untitled/Screens/HomeScreen.dart';
+import '../Model/Geolocator.dart';
 import 'Default_Cities/Barcelona.dart';
 import 'Default_Cities/Karachi.dart';
 import 'Default_Cities/London.dart';
@@ -16,20 +15,6 @@ class SelectionScreen extends StatefulWidget {
 }
 
 class _SelectionScreenState extends State<SelectionScreen> {
-  void getcurrentPosistion() async {
-    LocationPermission permission = await Geolocator.checkPermission();
-    if (permission == LocationPermission.denied ||
-        permission == LocationPermission.deniedForever) {
-      print("PERMISSION NOT GIVEN");
-      LocationPermission asked = await Geolocator.requestPermission();
-    } else {
-      Position currentPosition = await Geolocator.getCurrentPosition(
-          desiredAccuracy: LocationAccuracy.best);
-      print("longitude:" + currentPosition.longitude.toString());
-      print("Latitude:" + currentPosition.latitude.toString());
-    }
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -107,8 +92,9 @@ class _SelectionScreenState extends State<SelectionScreen> {
                       ),
                       GestureDetector(
                         onTap: () {
+                          getcurrentPosistion();
                           Navigator.of(context).push(
-                              MaterialPageRoute(builder: (_) => Karachi()));
+                              MaterialPageRoute(builder: (_) => HomeScreen()));
                         },
                         child: Padding(
                           padding: const EdgeInsets.only(left: 11),
