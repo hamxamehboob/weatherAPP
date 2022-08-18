@@ -6,7 +6,7 @@ Made Weather App in Hackathon Test.
   <tr>
     <td>Splash Screen</td>
      <td>Landing Screen</td>
-     <td>Ciry Selection Screen</td>
+     <td>City Selection Screen</td>
      <td>Karachi Screen</td>
      <td>London Screen</td>
      <td>Barcelona Screen</td>
